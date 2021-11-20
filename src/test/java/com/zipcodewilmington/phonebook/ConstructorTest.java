@@ -3,19 +3,18 @@ package com.zipcodewilmington.phonebook;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ConstructorTest {
     @Test
     public void testNullaryConstructor() {
         // given
+
         // when
         PhoneBook phoneBook = new PhoneBook();
 
         // then
-        Assert.assertTrue(phoneBook.getMap() instanceof HashMap);
+        Assert.assertTrue(phoneBook.getMap() instanceof LinkedHashMap); //changed it to from HashMap to LinkedHasMap
     }
 
     @Test
