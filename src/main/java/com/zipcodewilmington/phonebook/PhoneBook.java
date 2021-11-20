@@ -52,7 +52,14 @@ public class PhoneBook {
     }
 
     public String reverseLookup(String phoneNumber) {
-        return null;
+        String name = "";
+
+        for(String key : phonebook.keySet()){
+         if(phonebook.get(key).contains(phoneNumber)){ //checks if key contains phoneNumber
+            name = key;
+         }
+        }
+        return name;
     }
 
     public List<String> getAllContactNames() {
